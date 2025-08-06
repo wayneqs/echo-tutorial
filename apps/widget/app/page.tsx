@@ -3,6 +3,11 @@
 import { api } from "@workspace/backend/_generated/api";
 import { useQuery } from "convex/react";
 
+/**
+ * Displays a list of users fetched from the API in a formatted JSON view.
+ *
+ * Renders a centered layout with a label and the user data retrieved via a query hook.
+ */
 export default function Page() {
   const users = useQuery(api.users.getMany);
 
