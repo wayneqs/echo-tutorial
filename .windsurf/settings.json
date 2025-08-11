@@ -1,0 +1,36 @@
+{
+  // General editor settings
+  "editor.tabSize": 2,
+  "files.trimTrailingWhitespace": true,
+
+  // Enable format on save
+  "editor.formatOnSave": true,
+
+  // Specify default formatters to avoid conflicts
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // The ID for the Prettier extension
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+
+  // ESLint settings
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true // Automatically fix ESLint errors on save
+  }
+}
