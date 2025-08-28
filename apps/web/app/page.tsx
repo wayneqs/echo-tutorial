@@ -10,6 +10,11 @@ import {
   useQuery,
 } from "convex/react";
 
+/**
+ * Renders a page that displays a list of users and provides a button to add a new user.
+ *
+ * Fetches users from the backend and displays them as formatted JSON. Clicking the "Add" button triggers the creation of a new user.
+ */
 export default function Page() {
   const users = useQuery(api.users.getMany);
   const addUser = useMutation(api.users.create);
