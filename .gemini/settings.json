@@ -1,0 +1,47 @@
+{
+  "mcp_servers": [
+    "mcp://shadcn.community/latest",
+    "mcp://nextjs.expert/app-router",
+    "mcp://convex.best-practices/v1"
+  ],
+  "project": {
+    "file_pattern": [
+      "**/*.{js,jsx,ts,tsx}",
+      "**/convex/**/*.ts",
+      "**/drizzle/**/*.ts",
+      "**/app/**/*.{ts,tsx}",
+      "**/components/**/*.{ts,tsx}",
+      "**/*.json",
+      "**/*.md"
+    ],
+    "ignored_files": [
+      "**/node_modules/**",
+      "**/.next/**",
+      "**/.DS_Store",
+      "**/package-lock.json",
+      "**/yarn.lock"
+    ]
+  },
+  "codeGeneration": {
+    "frameworks": ["nextjs", "react", "tailwindcss"],
+    "language": "typescript",
+    "style": "concise",
+    "dependencies": "infer"
+  },
+  "codeActions": {
+    "custom_prompts": [
+      {
+        "name": "Drizzle: Create Schema",
+        "prompt": "Create a Drizzle ORM schema for a {{name}} table using TypeScript. Include fields for {{fields}}. Ensure you import necessary functions from 'drizzle-orm/pg-core'."
+      },
+      {
+        "name": "Convex: Define Mutation",
+        "prompt": "Write a Convex mutation function in TypeScript named '{{name}}' that {{description}}. Ensure you import 'mutation' from './_generated/server'."
+      },
+      {
+        "name": "Next.js: New API Route",
+        "prompt": "Create a Next.js App Router API route handler in 'app/api/{{routeName}}/route.ts'. It should handle a {{method}} request to {{description}}. Use TypeScript."
+      }
+    ]
+  }
+}
