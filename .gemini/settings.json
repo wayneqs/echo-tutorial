@@ -2,7 +2,9 @@
   "mcp_servers": [
     "mcp://shadcn.community/latest",
     "mcp://nextjs.expert/app-router",
-    "mcp://convex.best-practices/v1"
+    "mcp://convex.best-practices/v1",
+    "mcp://context7.dev/v1",
+    "mcp://byterover.io/v2.0"
   ],
   "project": {
     "file_pattern": [
